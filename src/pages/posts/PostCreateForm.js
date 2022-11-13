@@ -77,7 +77,7 @@ function PostCreateForm() {
         >
         </Form.Control>
         {errors?.title?.map((message, idx) => {
-          <Alert key={idx} variant="warning">
+          return <Alert key={idx} variant="warning">
             {message}
           </Alert>
         })
@@ -94,7 +94,7 @@ function PostCreateForm() {
         </Form.Control>
       </Form.Group>
       {errors?.content?.map((message, idx) => {
-        <Alert key={idx} variant="warning">
+        return <Alert key={idx} variant="warning">
           {message}
         </Alert>
       })
@@ -148,7 +148,7 @@ function PostCreateForm() {
               <Form.File id="image-upload" accept="image/*" onChange={handleChangeImage} ref={imageInput} />
             </Form.Group>
             {errors?.image?.map((message, idx) => {
-              <Alert key={idx} variant="warning">
+              return <Alert key={idx} variant="warning">
                 {message}
               </Alert>
             })
