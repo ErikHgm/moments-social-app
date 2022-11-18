@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dropdown, ModalFooter } from 'react-bootstrap'
+import { Dropdown } from 'react-bootstrap'
 import styles from '../styles/MoreDropDown.module.css'
 
 
