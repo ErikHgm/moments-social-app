@@ -7,8 +7,10 @@ import appStyles from "../../App.module.css";
 import { Form, Button, Image, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 import { useHistory } from "react-router";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const SignUpForm = () => {
+    useRedirect('loggedIn')
     const [signUpData, setSignUpData] = useState({
         username: '',
         password1: '',
@@ -61,7 +63,7 @@ const SignUpForm = () => {
                                 {message}
                             </Alert>
                         ))}
-                       
+
                         <Form.Group controlId="password1">
                             <Form.Label className="d-none">password</Form.Label>
                             <Form.Control
